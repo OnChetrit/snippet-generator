@@ -1,0 +1,18 @@
+$font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+$font-mono: 'DM Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+$tablet-breakpoint: 1030px;
+$mobile-breakpoint: 680px;
+
+:root {
+  --color-ink: #edf4ff;
+  --color-muted: #91a2ba;
+  --color-canvas: #08111e;
+  --color-panel: #0e1928;
+  --color-panel-raised: #111f31;
+  --color-line: #263951;
+  --color-blue: #4da3ff;
+  --color-purple: #b093ff;
+  --color-mint: #54ddbd;
+  --color-orange: #ffbc65;
+  --shadow-workspace: 0 24px 72px rgba(0, 0, 0, 0.3);
+}

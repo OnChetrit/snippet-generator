@@ -1,0 +1,37 @@
+@use './tokens' as tokens;
+
+.hero {
+  width: min(1260px, 90.4vw);
+  margin: 0 auto;
+  padding: 62px 0 42px;
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: #7cbfff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(34px, 4.2vw, 59px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+
+.hero-copy {
+  max-width: 630px;
+  margin: 18px 0 0;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+@media (max-width: tokens.$mobile-breakpoint) {
+  .hero {
+    padding: 43px 0 30px;
+  }
+}

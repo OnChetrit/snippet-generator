@@ -1,0 +1,23 @@
+@use './tokens';
+@use './base';
+@use './header';
+@use './hero';
+@use './workspace';
+@use './output';
+
+.studio-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 77% 5%,
+      rgba(89, 88, 215, 0.2),
+      transparent 27rem
+    ),
+    radial-gradient(
+      circle at 18% 47%,
+      rgba(0, 160, 180, 0.09),
+      transparent 30rem
+    ),
+    var(--color-canvas);
+  color: var(--color-ink);
+}

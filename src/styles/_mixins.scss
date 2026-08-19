@@ -1,0 +1,49 @@
+@use './tokens' as tokens;
+
+@mixin interactive-button {
+  border: 1px solid var(--color-line);
+  border-radius: 7px;
+  background: transparent;
+  color: #c7d4e5;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 9px 12px;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background-color 160ms ease;
+
+  &:hover {
+    border-color: var(--color-blue);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(77, 163, 255, 0.3);
+    outline-offset: 2px;
+  }
+}
+
+@mixin input-control {
+  width: 100%;
+  border: 1px solid #2b405a;
+  border-radius: 6px;
+  outline: none;
+  background: #0a1422;
+  color: #eaf3ff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 9px 10px;
+
+  &:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.12);
+  }
+}
+
+@mixin mono-text($size, $line-height: 1.6) {
+  font-family: tokens.$font-mono;
+  font-size: $size;
+  line-height: $line-height;
+}

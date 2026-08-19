@@ -1,0 +1,114 @@
+@use './mixins' as mixins;
+@use './tokens' as tokens;
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(145, 162, 186, 0.17);
+  padding: 0 4.8vw;
+  background: rgba(8, 17, 30, 0.76);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+  color: var(--color-canvas);
+  font-size: 20px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.saved-dot {
+  margin-right: 10px;
+  color: #9bb0c7;
+  font-size: 12px;
+
+  &::first-letter {
+    color: var(--color-mint);
+  }
+}
+
+.saved-snippets-picker select,
+.quiet-button,
+.save-button,
+.primary-button {
+  @include mixins.interactive-button;
+}
+
+.saved-snippets-picker select {
+  max-width: 190px;
+  padding: 8px 28px 8px 10px;
+  color: #b9c7d9;
+  font-size: 12px;
+}
+
+.save-button {
+  border-color: #4da88d;
+  background: rgba(77, 168, 141, 0.14);
+  color: #9fe3cc;
+
+  &:hover {
+    border-color: #72d7b7;
+    background: rgba(77, 168, 141, 0.25);
+  }
+}
+
+.primary-button {
+  border-color: #79c4ff;
+  background: #79c4ff;
+  color: #061321;
+
+  &:hover {
+    border-color: #a7d7ff;
+    background: #a7d7ff;
+    color: #061321;
+  }
+}
+
+@media (max-width: tokens.$tablet-breakpoint) {
+  .topbar {
+    padding: 0 3vw;
+  }
+}
+
+@media (max-width: tokens.$mobile-breakpoint) {
+  .topbar {
+    height: auto;
+    align-items: flex-start;
+    padding: 14px 5vw;
+  }
+
+  .topbar-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .saved-dot,
+  .download-button,
+  .saved-snippets-picker {
+    display: none;
+  }
+}

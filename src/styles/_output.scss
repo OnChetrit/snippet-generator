@@ -1,0 +1,45 @@
+@use './mixins' as mixins;
+@use './tokens' as tokens;
+
+.output-section {
+  display: grid;
+  width: min(1260px, 90.4vw);
+  margin: 0 auto;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 45px;
+  padding: 70px 0 85px;
+
+  p:not(.eyebrow) {
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  code {
+    color: #9fc8ff;
+  }
+}
+
+.json-output {
+  margin: 0;
+  overflow: auto;
+  border: 1px solid #263b55;
+  border-radius: 9px;
+  padding: 17px;
+  background: #0c1726;
+  color: #aec9e5;
+
+  @include mixins.mono-text(11px);
+}
+
+@media (max-width: tokens.$mobile-breakpoint) {
+  .output-section {
+    display: block;
+    width: 90vw;
+    padding: 48px 0 60px;
+  }
+
+  .json-output {
+    margin-top: 22px;
+  }
+}
