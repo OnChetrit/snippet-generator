@@ -2,6 +2,7 @@
   "name": "snippet-generator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://onchetrit.github.io/snippet-generator",
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -16,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
@@ -45,6 +48,7 @@
     "@types/jest": "^29.5.14",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.9.6",
     "sass": "^1.102.0",
     "typescript": "^4.9.5"

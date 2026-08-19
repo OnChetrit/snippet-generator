@@ -1,9 +1,20 @@
 # Snippet Studio
 
-A visual VS Code snippet generator built with React, TypeScript, and Sass. Choose
-a filename to enable the appropriate Monaco language mode, use Emmet in
-HTML/CSS/JSX/TSX files, add native snippet variables and tabstops, and inspect an
-expanded preview before copying the JSON.
+Snippet Studio is a visual VS Code snippet generator built with React,
+TypeScript, Monaco Editor, and Sass. Create language-aware snippets, preview
+their expansion, and copy or download the resulting JSON.
+
+## Live site
+
+[Open Snippet Studio](https://onchetrit.github.io/snippet-generator)
+
+## Features
+
+- Select a target filename to enable the matching Monaco language mode.
+- Use Emmet in HTML, CSS, JSX, and TSX snippets.
+- Add VS Code variables, tabstops, placeholders, and choices.
+- Preview the expanded snippet with a custom variable context.
+- Copy the JSON definition or download a project `.code-snippets` file.
 
 ## Run locally
 
@@ -11,6 +22,16 @@ expanded preview before copying the JSON.
 npm install
 npm start
 ```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Scripts
+
+- `npm start` — start the local development server.
+- `npm run build` — create a production build.
+- `npm run deploy` — build and publish the app to GitHub Pages.
+- `npm run typecheck` — run TypeScript checks.
+- `npm test -- --watchAll=false` — run the test suite once.
 
 ## Quality checks
 
@@ -22,7 +43,7 @@ npm test -- --watchAll=false
 npm run build
 ```
 
-## Use the generated snippet
+## Using generated snippets
 
 Copy the generated definition into VS Code's **Snippets: Configure Snippets**
 file for the target language, or download it as a project `.code-snippets` file.
