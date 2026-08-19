@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/snippet-generator/static/css/main.35267514.css",
+    "main.js": "/snippet-generator/static/js/main.e86eb3c6.js",
+    "index.html": "/snippet-generator/index.html",
+    "main.35267514.css.map": "/snippet-generator/static/css/main.35267514.css.map",
+    "main.e86eb3c6.js.map": "/snippet-generator/static/js/main.e86eb3c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35267514.css",
+    "static/js/main.e86eb3c6.js"
+  ]
+}
