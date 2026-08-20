@@ -16,6 +16,12 @@ their expansion, and copy or download the resulting JSON.
 - Preview the expanded snippet with a custom variable context.
 - Copy the JSON definition or download a project `.code-snippets` file.
 
+## Screenshots
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Snippet Studio desktop workspace](docs/screenshots/snippet-studio-desktop.png) | ![Snippet Studio mobile workspace](docs/screenshots/snippet-studio-mobile.png) |
+
 ## Run locally
 
 ```bash
